@@ -1,4 +1,3 @@
-const fs = require('fs');
 const pkg = require('./package.json')
 const glob = require('glob')
 const yargs = require('yargs')
@@ -275,23 +274,22 @@ gulp.task('default', gulp.series(gulp.parallel('js', 'css', 'plugins'), 'test'))
 
 gulp.task('build', gulp.parallel('js', 'css', 'plugins'))
 
-gulp.task('package', gulp.series(async () => {
+gulp.task('package', gulp.series(() =>
 
-    let dirs = [
-        './index.html',
-        './dist/**',
-        './plugin/**',
-        './*/*.md'
-    ];
-
-    if (fs.existsSync('./lib')) dirs.push('./lib/**');
-    if (fs.existsSync('./images')) dirs.push('./images/**');
-    if (fs.existsSync('./slides')) dirs.push('./slides/**');
-
-    return gulp.src( dirs, { base: './', encoding: false } )
+    gulp.src(
+        [
+            './index.html',
+            './dist/**',
+            './lib/**',
+            './images/**',
+            './plugin/**',
+            './**/*.md'
+        ],
+        { base: './' }
+    )
     .pipe(zip('reveal-js-presentation.zip')).pipe(gulp.dest('./'))
 
-}))
+))
 
 gulp.task('reload', () => gulp.src(['index.html'])
     .pipe(connect.reload()));
