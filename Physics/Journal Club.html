@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Journal Club</title>
+
+    <link rel="stylesheet" a href="/dist/reset.css" />
+    <link rel="stylesheet" a href="/dist/reveal.css" />
+    <link rel="stylesheet" a href="/dist/theme/black.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" a href="/plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>Classical chaos in quantum computers</h2>
+          Börner, S.-D., Berke, C., DiVincenzo, D. P., Trebst, S. and Altland,
+          A. 2024, 'Classical chaos in quantum computers',
+          <i style="font-style: italic !important">Physical Review Research</i>,
+          vol. 6, issue. 3, pp. 33128-33142, DOI:
+          10.1103/physrevresearch.6.033128.
+        </section>
+        <section>
+          <h1>Contents</h1>
+          <ul>
+            <li>Background: What is a quantum computer (in this context)?</li>
+            <li>Findings: Why is there chaos?</li>
+            <li>Review: Why does it matter?</li>
+          </ul>
+        </section>
+        <section>
+          Background
+          <section>
+            <h2>What is a quantum computer?</h2>
+            Qubits, coupled together and controlled by gates, to do computation.
+          </section>
+          <section>
+            <h3>What is a qubit?</h3>
+            A two-level quantum system. Think spin up/down of an electron.
+          </section>
+          <section>
+            <h4>Transmon qubits</h4>
+            Superconducting charge qubits! TODO
+          </section>
+          <section>
+            <h3>What is a gate?</h3>
+            A manipulation of qubit state(s). For example, the classical NOT
+            gate takes a classical bit and flips it from 0->1 or from 1->0.
+          </section>
+          <section>
+            <h3>How do you couple qubits?</h3>
+            TODO
+          </section>
+        </section>
+        <section>
+          Findings
+          <section>TODO</section>
+        </section>
+        <section>
+          Predecessors
+          <section>
+            Georgeot, B. and Shepelyansky, D. L. 2000, 'Quantum chaos border for
+            quantum computing',
+            <i style="font-style: italic !important">Phys. Rev. E</i>, vol. 62,
+            no. 3, pp. 3504-3507, DOI: 10.1103/physreve.62.3504.
+          </section>
+          <section>TODO</section>
+        </section>
+        <section>
+          What research has followed from this?
+          <section>
+            Berke, C., Varvelis, E., Trebst, S.
+            <i style="font-style: italic !important">et al.</i> Transmon
+            platform for quantum computing challenged by chaotic fluctuations.
+            <i style="font-style: italic !important">Nat Commun</i>
+            <strong>13</strong>, 2495 (2022).
+            https://doi.org/10.1038/s41467-022-29940-y
+          </section>
+          <section>TODO</section>
+        </section>
+        <section>
+          Significance
+          <section>TODO</section>
+        </section>
+      </div>
+    </div>
+
+    <script a src="/dist/reveal.js"></script>
+    <script a src="/plugin/notes/notes.js"></script>
+    <script a src="/plugin/markdown/markdown.js"></script>
+    <script a src="/plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
