@@ -31,8 +31,8 @@
           <h1>Contents</h1>
           <ul>
             <li>Background: What is a quantum computer (in this context)?</li>
-            <li>Findings: Why is there chaos?</li>
-            <li>Review: Why does it matter?</li>
+            <li>Findings: Chaos?</li>
+            <li>Review: Does this paper matter?</li>
           </ul>
         </section>
         <section>
@@ -77,17 +77,18 @@
           <section>
             <h4>Transmon qubit as a quantum pendulum</h4>
             Consider \(\hat{\varphi}\) as an angular variable with
-            \(\hat{L_Z}=\hbar\hat{n}\), then:
+            \(\hat{L_Z}=\hbar\hat{n}\), so
             <br />
-            <ul>
-              <li>\(E_C=\frac{\hbar^2}{8ml^2}\)</li>
-              <li>\(g=\frac{E_J}{ml}\)</li>
-            </ul>
+            \(E_C=\frac{\hbar^2}{8ml^2}\) and \(g=\frac{E_J}{ml}\),
             <br />
             <br />
-            Therefore:
+            therefore
             <br />
-            \(\hat{H}_{Tr} = \frac{\hat{L_Z}^2}{2ml^2}-mgl\cos\hat{\varphi}\)
+            <br />
+            \(\hat{H}_{Tr} = \frac{\hat{L_Z}^2}{2ml^2}-mgl\cos\hat{\varphi}\),
+            <br />
+            <br />
+            i.e. a pendulum!
           </section>
           <section>
             <h3>Coupling transmon qubits</h3>
@@ -104,8 +105,10 @@
           </section>
           <section>
             <h3>What is a gate?</h3>
-            A manipulation of qubit state(s). For example, the classical NOT
-            gate takes a classical bit and flips it from 0->1 or from 1->0.
+            A manipulation of qubit state(s).
+            <br />
+            For example, the classical NOT gate takes a classical bit and flips
+            it from \(0\to1\) or from \(1\to0\).
           </section>
         </section>
         <section>
@@ -124,6 +127,46 @@
             Tiny margin close to \(T=0\) (uncoupled) where system is not
             chaotic!
           </section>
+          <section>
+            <h3>Quantum to classical correspondence</h3>
+            Define the inverse participation ratio (IPR) as a measure of quantum
+            chaotic dynamics,
+            <br />
+            \(IPR=\sum_k |\langle k|\psi\rangle|^4\), where \(|\psi\rangle\) is
+            many-body wave function and \(|k\rangle\) is Fock state.
+          </section>
+          <section>
+            <h3>Quantum to classical correspondence</h3>
+            <img a src="/assets/ipr lyapunov.png" width="600" />
+            <br />
+            Classical chaos appears to correspond with quantum chaos
+          </section>
+          <section>
+            <h3>Simulation of large arrays</h3>
+            <img a src="/assets/large array.png" width="600" />
+            <br />
+            More qubits, more chaos!
+          </section>
+          <section>
+            <h3>Simulation of IBM's big chips</h3>
+            <img a src="/assets/ibm sim.png" width="400" />
+            <img a src="/assets/ibm chips.png" width="400" />
+          </section>
+        </section>
+        <section>
+          Significance
+          <section>
+            <h3>Engineering driven by lyapunov exponents</h3>
+            <img a src="/assets/lyapunov engineering crop.jpg" width="450" />
+            <br />
+            Computationally much cheaper - approximately linear vs exponential
+            in number of qubits!
+          </section>
+          <section>
+            <h3>Understanding sources of noise</h3>
+            We know a lot about how noise affects quantum computers, but limited
+            understanding of where the noise comes from
+          </section>
         </section>
         <section>
           Predecessors
@@ -133,7 +176,31 @@
             <i style="font-style: italic !important">Phys. Rev. E</i>, vol. 62,
             no. 3, pp. 3504-3507, DOI: 10.1103/physreve.62.3504.
           </section>
-          <section>TODO</section>
+          <section>
+            Börner, S.-D. Classical Chaos in Transmon Qubit Arrays, Bachelor
+            thesis, University of Cologne (2020)
+          </section>
+          <section>
+            P. D. Bönninghaus, Chaotic instabilities in the classical limit of
+            IBM transmon qubit designs, Bachelor thesis, University of Cologne,
+            2021.
+          </section>
+          <section>
+            Berke, C., Varvelis, E., Trebst, S.
+            <i style="font-style: italic !important">et al.</i> Transmon
+            platform for quantum computing challenged by chaotic fluctuations.
+            <i style="font-style: italic !important">Nat Commun</i>
+            <strong>13</strong>, 2495 (2022).
+            https://doi.org/10.1038/s41467-022-29940-y
+          </section>
+          <section>
+            Berke, C., Transmon-based quantum computers from a many-body
+            perspective, PhD thesis, University of Cologne (2023).
+          </section>
+          <section>
+            J. Cohen, A. Petrescu, R. Shillito, and A. Blais, Reminiscence of
+            classical chaos in driven transmons, PRX Quantum 4, 020312 (2023).
+          </section>
         </section>
         <section>
           What research has followed from this?
@@ -145,11 +212,6 @@
             <strong>13</strong>, 2495 (2022).
             https://doi.org/10.1038/s41467-022-29940-y
           </section>
-          <section>TODO</section>
-        </section>
-        <section>
-          Significance
-          <section>TODO</section>
         </section>
       </div>
     </div>
