@@ -47,16 +47,61 @@
           </section>
           <section>
             <h4>Transmon qubits</h4>
-            Superconducting charge qubits! TODO
+            Josephson junction (barrier sandwiched between superconductors) +
+            capacitor
+            <img
+              a
+              src="/assets/transmon.png"
+              width="700"
+              alt="Transmon qubit"
+            />
+          </section>
+          <section>
+            <h4>Transmon qubit Hamiltonian</h4>
+            \(\hat{H}_{Tr} = 4E_C \hat{n}^2 - E_J \cos \hat{\varphi}\)
+            <br />
+            <br />
+            where
+            <ul>
+              <li>
+                \(\hat{n}\) is the number of Cooper pairs traversed across the
+                junction (charge operator)
+              </li>
+              <li>
+                \(\hat{\varphi}\) is the superconducting phase difference across
+                the junction
+              </li>
+              <li>\(E_J\), \(E_C\) are Josephson and charging energies</li>
+            </ul>
+          </section>
+          <section>
+            <h4>Transmon qubit as a quantum pendulum</h4>
+            Consider \(\hat{\varphi}\) as an angular variable with
+            \(\hat{L_Z}=\hbar\hat{n}\), then:
+            <br />
+            <ul>
+              <li>\(E_C=\frac{\hbar^2}{8ml^2}\)</li>
+              <li>\(g=\frac{E_J}{ml}\)</li>
+            </ul>
+            <br />
+            <br />
+            Therefore:
+            <br />
+            \(\hat{H}_{Tr} = \frac{\hat{L_Z}^2}{2ml^2}-mgl\cos\hat{\varphi}\)
+          </section>
+          <section>
+            <h3>Coupling transmon qubits</h3>
+            Neighbours \(i\) and \(j\) are capacitively coupled
+            (\(\hat{n_i}\hat{n_j}\)), giving the Hamiltonian for array of
+            transmons:
+            <br />
+            \(\hat{H} = \sum_i \hat{H_{Tr}} + T\sum_{\langle i,j \rangle}
+            \hat{n_i}\hat{n_j}\).
           </section>
           <section>
             <h3>What is a gate?</h3>
             A manipulation of qubit state(s). For example, the classical NOT
             gate takes a classical bit and flips it from 0->1 or from 1->0.
-          </section>
-          <section>
-            <h3>How do you couple qubits?</h3>
-            TODO
           </section>
         </section>
         <section>
@@ -106,6 +151,10 @@
         // Learn about plugins: https://revealjs.com/plugins/
         plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
       });
+    </script>
+    <script a src="/plugin/math/math.js"></script>
+    <script>
+      Reveal.initialize({ plugins: [RevealMath.KaTeX] });
     </script>
   </body>
 </html>
