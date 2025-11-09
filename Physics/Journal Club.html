@@ -26,10 +26,9 @@
           >, D. P., Trebst<sup>1</sup>, S. and Altland<sup>1</sup>, A. 2024,
           'Classical chaos in quantum computers',
           <i style="font-style: italic !important">Physical Review Research</i>,
-          vol. 6, issue. 3, pp. 33128-33142, DOI:
-          10.1103/physrevresearch.6.033128.
+          vol. 6, issue. 3, p. 033128, DOI: 10.1103/physrevresearch.6.033128.
           <hr />
-          <div style="text-align: left; font-size: 14px">
+          <div style="text-align: left; font-size: 20px">
             1: Institute for Theoretical Physics, University of Cologne
             <br />
             2: Institute for Quantum Information, RWTH Aachen University
@@ -44,25 +43,45 @@
         <section>
           <h1>Contents</h1>
           <ul>
-            <li>Background: What is a quantum computer (in this context)?</li>
-            <li>Findings: Chaos?</li>
-            <li>Review: Does this paper matter?</li>
+            <li>Background</li>
+            <ul>
+              <li>What is a quantum computer (in this context)?</li>
+            </ul>
+            <li>Findings</li>
+            <ul>
+              <li>Classical chaos in coupled (transmon) qubits</li>
+              <li>Quantum to classical correspondence</li>
+              <li>Simulations of chaos in large systems</li>
+            </ul>
+            <li>Review</li>
+            <ul>
+              <li>Practical applications</li>
+            </ul>
           </ul>
         </section>
         <section>
           Background
           <section>
             <h2>What is a quantum computer?</h2>
+            <img
+              style="float: right"
+              a
+              src="/assets/ibmq crop.jpg"
+              width="275"
+            />
+            <br />
             Qubits, coupled together and controlled by gates, to do computation.
           </section>
           <section>
             <h3>What is a qubit?</h3>
             A two-level quantum system. Think spin up/down of an electron.
+            <br />
+            <br />
+            <img a src="/assets/qubit.png" width="500" />
           </section>
           <section>
             <h4>Transmon qubits</h4>
-            Josephson junction (barrier sandwiched between superconductors) +
-            capacitor
+            Josephson junction + capacitor
             <img
               a
               src="/assets/transmon.png"
@@ -71,30 +90,39 @@
             />
           </section>
           <section>
+            <h4>Josephson Junction</h4>
+            <img a src="/assets/jj.jpg" width="400" />
+          </section>
+          <section>
             <h4>Transmon qubit Hamiltonian</h4>
             \(\hat{H}_{Tr} = 4E_C \hat{n}^2 - E_J \cos \hat{\varphi}\)
             <br />
             <br />
-            where
-            <ul>
-              <li>
-                \(\hat{n}\) is the number of Cooper pairs traversed across the
-                junction (charge operator)
-              </li>
-              <li>
-                \(\hat{\varphi}\) is the superconducting phase difference across
-                the junction
-              </li>
-              <li>\(E_J\), \(E_C\) are Josephson and charging energies</li>
-            </ul>
+            <div style="font-size: 20px">
+              where
+              <br />
+              <ul>
+                <li>
+                  \(\hat{n}\) is the number of Cooper pairs traversed across the
+                  junction (charge operator)
+                </li>
+                <li>
+                  \(\hat{\varphi}\) is the superconducting phase difference
+                  across the junction
+                </li>
+                <li>\(E_J\), \(E_C\) are Josephson and charging energies</li>
+              </ul>
+            </div>
           </section>
           <section>
             <h4>Transmon qubit as a quantum pendulum</h4>
             Consider \(\hat{\varphi}\) as an angular variable with
-            \(\hat{L_Z}=\hbar\hat{n}\), so
+            \(\hat{L_Z}=\hbar\hat{n}\),
             <br />
-            \(E_C=\frac{\hbar^2}{8ml^2}\) and \(g=\frac{E_J}{ml}\),
-            <br />
+            <div style="font-size: 20px">
+              <br />
+              \(E_C=\frac{\hbar^2}{8ml^2}\) and \(g=\frac{E_J}{ml}\),
+            </div>
             <br />
             therefore
             <br />
@@ -109,6 +137,7 @@
             Neighbours \(i\) and \(j\) are capacitively coupled
             (\(\hat{n_i}\hat{n_j}\), coupling strength \(T\)), giving the
             Hamiltonian for array of transmons:
+            <br />
             <br />
             \(\hat{H} = \sum_i \hat{H_{Tr}} + T\sum_{\langle i,j \rangle}
             \hat{n_i}\hat{n_j}\).
@@ -147,23 +176,21 @@
             chaotic dynamics,
             <br />
             \(IPR=\sum_k |\langle k|\psi\rangle|^4\), where \(|\psi\rangle\) is
-            many-body wave function and \(|k\rangle\) is Fock state.
+            many-body wave function and \(\langle k|\) is Fock state.
           </section>
           <section>
             <h3>Quantum to classical correspondence</h3>
-            <img a src="/assets/ipr lyapunov.png" width="600" />
-            <br />
-            Classical chaos appears to correspond with quantum chaos
+            <img a src="/assets/ipr lyapunov.png" width="425" />
           </section>
           <section>
             <h3>Simulation of large arrays</h3>
-            <img a src="/assets/large array.png" width="600" />
+            <img a src="/assets/large array.png" width="425" />
             <br />
             More qubits, more chaos!
           </section>
           <section>
             <h3>Simulation of IBM's big chips</h3>
-            <img a src="/assets/ibm sim.png" width="400" />
+            <img a src="/assets/ibm sim.png" width="475" />
             <img a src="/assets/ibm chips.png" width="400" />
           </section>
         </section>
@@ -171,19 +198,29 @@
           Significance
           <section>
             <h3>Engineering driven by lyapunov exponents</h3>
-            <img a src="/assets/lyapunov engineering crop.jpg" width="450" />
+            <img a src="/assets/lyapunov engineering.png" width="325" />
             <br />
             Computationally much cheaper - approximately linear vs exponential
             in number of qubits!
           </section>
           <section>
-            <h3>Understanding sources of noise</h3>
+            <h3>Understanding sources of noise<sup>1</sup></h3>
             We know a lot about how noise affects quantum computers, but limited
             understanding of where the noise comes from
+
+            <hr />
+            <div style="text-align: left; font-size: 20px">
+              1: Anything that causes errors/decoherence
+            </div>
           </section>
         </section>
         <section>
           Predecessors
+          <section>
+            All of quantum computing (Feynman etc.), superconducting (Josephson
+            etc.), chaos theory (Lorenz etc.), and quantum chaos (Gutzwiller
+            etc.).
+          </section>
           <section>
             Georgeot, B. and Shepelyansky, D. L. 2000, 'Quantum chaos border for
             quantum computing',
